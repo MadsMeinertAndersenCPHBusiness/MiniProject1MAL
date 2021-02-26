@@ -30,5 +30,12 @@ public class Stopwatch implements AutoCloseable {
     Sort insertionSort = new InsertionSort();
     insertionSort.sort(array);
     insertionSort.printArray(array);
+
+    int[] test = {1,2,3,5,1,3};
+    MergeSort mergeSort = new MergeSort();
+    mergeSort.sort(test);
+    for (int i = 0; i < test.length; i++){
+      System.out.println(test[i] + " ");
+    }
   }
 }
