@@ -1,7 +1,7 @@
 package dk.cphbusiness.mal.utils;
 
 public interface Sort {
-    void sort(String[] text);
+    void sort(String[] arr);
 
     default void printArray(String[] array) {
         for (int i = 0; i < array.length; i++){

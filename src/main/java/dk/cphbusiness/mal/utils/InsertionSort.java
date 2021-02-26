@@ -2,20 +2,20 @@ package dk.cphbusiness.mal.utils;
 
 public class InsertionSort implements Sort {
     @Override
-    public void sort(String[] text) {
-        int length = text.length;
+    public void sort(String[] arr) {
+        int length = arr.length;
         for (int i = 1;  i < length; ++i){
-            String key = text[i];
+            String key = arr[i];
             int index = i - 1;
             //String prev = text[index];
 
-            while (index >= 0 && key.compareTo(text[index]) < 0){
+            while (index >= 0 && key.compareTo(arr[index]) < 0){
               //  text[i] = prev;
-                text[index + 1] = text[index];
+                arr[index + 1] = arr[index];
 
                 index = index - 1;
             }
-                text[index + 1] = key;
+                arr[index + 1] = key;
         }
     }
 }

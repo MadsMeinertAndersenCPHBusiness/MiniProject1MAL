@@ -4,16 +4,16 @@ import java.util.Arrays;
 
 public class MergeSortString implements Sort {
     @Override
-    public void sort(String[] text) {
-        if(text.length <= 1) return;
-        int mid = text.length / 2;
+    public void sort(String[] arr) {
+        if(arr.length <= 1) return;
+        int mid = arr.length / 2;
 
-        String[] left = Arrays.copyOfRange(text, 0,mid);
-        String[] right = Arrays.copyOfRange(text, mid ,text.length);
+        String[] left = Arrays.copyOfRange(arr, 0,mid);
+        String[] right = Arrays.copyOfRange(arr, mid , arr.length);
         sort(left);
         sort(right);
 
-        merge(text, left, right);
+        merge(arr, left, right);
     }
     public void merge(String[] arr, String[] left, String[] right){
         int l = 0;

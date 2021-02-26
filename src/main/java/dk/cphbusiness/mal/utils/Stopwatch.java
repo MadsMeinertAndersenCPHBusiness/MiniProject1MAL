@@ -26,8 +26,8 @@ public class Stopwatch implements AutoCloseable {
     }
 
     String[] array = FileUtility.toStringArray("./data/Test.txt", "[^A-Za-z']+");
-
     Sort insertionSort = new InsertionSort();
+ /*
     insertionSort.sort(array);
     insertionSort.printArray(array);
 
@@ -37,5 +37,14 @@ public class Stopwatch implements AutoCloseable {
     for (int i = 0; i < test.length; i++){
       System.out.println(test[i] + " ");
     }
+
+    MergeSortString mergeSortString = new MergeSortString();
+    mergeSortString.sort(array);
+    insertionSort.printArray(array);
+    */
+
+    SelectionSort selectionSort = new SelectionSort();
+    selectionSort.sort(array);
+    insertionSort.printArray(array);
   }
 }
