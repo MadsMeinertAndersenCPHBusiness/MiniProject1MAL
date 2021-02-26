@@ -13,10 +13,12 @@ public class SelectionSort implements Sort{
                     min = i;
                 }
             }
+
             key = arr[index];
             arr[index] = arr[min];
             arr[min] = key;
             index++;
+            min = index;
         }
     }
 }

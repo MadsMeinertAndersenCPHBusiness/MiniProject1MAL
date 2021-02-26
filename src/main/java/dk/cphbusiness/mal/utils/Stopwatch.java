@@ -41,7 +41,7 @@ public class Stopwatch implements AutoCloseable {
     MergeSortString mergeSortString = new MergeSortString();
     mergeSortString.sort(array);
     insertionSort.printArray(array);
-    */
+*/
 
     SelectionSort selectionSort = new SelectionSort();
     selectionSort.sort(array);
