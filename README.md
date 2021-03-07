@@ -5,4 +5,4 @@
 
 
 ## Times:
-{!https://github.com/MadsMeinertAndersenCPHBusiness/MiniProject1MAL/blob/main/SortTimes-MiniProject1.PNG}
+![Run times](https://github.com/MadsMeinertAndersenCPHBusiness/MiniProject1MAL/blob/main/SortTimes-MiniProject1.PNG)
