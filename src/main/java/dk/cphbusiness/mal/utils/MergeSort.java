@@ -1,27 +1,16 @@
 package dk.cphbusiness.mal.utils;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
-public class MergeSort {
+public class MergeSort implements Sort {
 
-    public void sort(int[] arr) {
-        if(arr.length <= 1) return;
-        int mid = arr.length / 2;
-
-        int[] left = Arrays.copyOfRange(arr, 0,mid);
-        int[] right = Arrays.copyOfRange(arr, mid ,arr.length);
-        sort(left);
-        sort(right);
-
-        merge(arr, left, right);
-    }
-
-    public void merge(int[] arr, int[] left, int[] right){
+    private void merge(Object[] arr, Object[] left, Object[] right, Comparator comparator){
         int l = 0;
         int r = 0;
         int a = 0;
         while(l < left.length && r < right.length){
-            if (left[l] < right[r]){
+            if (comparator.compare(left[l], right[r]) <= 0) {
                 arr[a++] = left[l++];
             }else arr[a++] = right[r++];
         }
@@ -31,5 +20,18 @@ public class MergeSort {
         while (r < right.length){
             arr[a++] = right[r++];
         }
-        }
+    }
+
+    @Override
+    public void sort(Object[] arr, Comparator comparator) {
+        if(arr.length <= 1) return;
+        int mid = arr.length / 2;
+
+        Object[] left = Arrays.copyOfRange(arr, 0,mid);
+        Object[] right = Arrays.copyOfRange(arr, mid , arr.length);
+        sort(left, comparator);
+        sort(right, comparator);
+
+        merge(arr, left, right, comparator);
+    }
 }

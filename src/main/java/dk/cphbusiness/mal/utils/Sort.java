@@ -1,9 +1,11 @@
 package dk.cphbusiness.mal.utils;
 
-public interface Sort {
-    void sort(String[] arr);
+import java.util.Comparator;
 
-    default void printArray(String[] array) {
+public interface Sort<T> {
+    void sort(T[] arr, Comparator<T> comparator);
+
+    default void printArray(T[] array) {
         for (int i = 0; i < array.length; i++){
             System.out.println(array[i] + " ");
         }

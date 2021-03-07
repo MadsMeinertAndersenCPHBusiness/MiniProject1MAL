@@ -1,15 +1,18 @@
 package dk.cphbusiness.mal.utils;
 
-public class SelectionSort implements Sort{
+import java.util.Comparator;
+
+public class SelectionSort implements Sort {
+
     @Override
-    public void sort(String[] arr) {
-        String key;
+    public void sort(Object[] arr, Comparator comparator) {
+        Object key;
         int index = 0;
         int min = 0;
 
-        while (index < arr.length){
-            for (int i = index; i < arr.length ; i++) {
-                if (arr[min].toLowerCase().compareTo(arr[i] .toLowerCase()) >= 0){
+        while (index < arr.length) {
+            for (int i = index; i < arr.length; i++) {
+                if (comparator.compare(arr[min], arr[i]) >= 0){
                     min = i;
                 }
             }
@@ -21,4 +24,5 @@ public class SelectionSort implements Sort{
             min = index;
         }
     }
+
 }
