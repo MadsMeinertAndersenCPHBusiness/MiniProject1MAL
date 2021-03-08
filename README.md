@@ -5,4 +5,5 @@
 
 
 ## Times:
+Times are in milliseconds
 ![Run times](https://github.com/MadsMeinertAndersenCPHBusiness/MiniProject1MAL/blob/main/SortTimes-MiniProject1.PNG)
